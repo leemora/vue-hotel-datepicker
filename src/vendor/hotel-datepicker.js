@@ -254,16 +254,6 @@ export default class HotelDatepicker {
 
         // Update the selected values when the input changes manually
         this.input.addEventListener('change', () => this.checkAndSetDefaultValue());
-
-		// If the user presses delete or backspace, clear the selection
-        document.addEventListener('keydown', KeyCheck);
-
-        function KeyCheck(event) {
-            var KeyID = event.keyCode;
-            if (KeyID === 8 || KeyID === 46) {
-                self.clearSelection();
-            }
-        }
     }
 
     createDom() {
