@@ -526,7 +526,7 @@ export default class HotelDatepicker {
 
     documentHover(evt) {
         // Check if the hover is on a calendar day
-        if (evt.target.tagName && evt.target.tagName.toLowerCase() === 'td') {
+        if (evt.target.tagName && evt.target.tagName.toLowerCase() === 'td' && _.indexOf(evt.target.classList, 'datepicker__month-day') != -1) {
             this.dayHovering(evt.target);
         }
     }
